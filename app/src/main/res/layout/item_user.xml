@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.alfansyah.multidaya.androidbinding.models.DataUser" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
+                tools:src="@drawable/binding"/>
+
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/full_names"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/space_default"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:layout_toEndOf="@+id/ivProfile"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_default"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/tvFullName"
+                android:layout_toEndOf="@+id/ivProfile"
+                tools:text="tristan@gmail.com" />
+
+        </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+</layout>
