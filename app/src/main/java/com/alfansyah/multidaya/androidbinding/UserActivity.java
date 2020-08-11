@@ -23,9 +23,9 @@ public class UserActivity extends AppCompatActivity {
         ivProfile = findViewById(R.id.ivProfile);
 
         Bundle extras = getIntent().getExtras();
-        tvFullName.setText(extras.getString("name_users"));
-        tvEmail.setText(extras.getString("email_users"));
-        Glide.with(getApplicationContext()).load(extras.getString("image_users"))
+        tvFullName.setText(extras.getString("name_user"));
+        tvEmail.setText(extras.getString("email_user"));
+        Glide.with(getApplicationContext()).load(extras.getString("avatar"))
                 .apply(RequestOptions.centerCropTransform()).into(ivProfile);
 
     }

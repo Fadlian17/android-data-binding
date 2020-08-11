@@ -85,7 +85,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
-
         return usersFiltered.size();
     }
 
@@ -94,7 +93,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
 
         TextView tvFullName, tvEmail;
         ImageView ivProfile;
-//        CardView cardView;
+        CardView cardView;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -105,6 +104,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
             tvFullName = itemView.findViewById(R.id.tvFullName);
             tvEmail = itemView.findViewById(R.id.tvEmail);
             ivProfile = itemView.findViewById(R.id.ivProfile);
+//            cardView = itemView.findViewById(R.id.card_view);
         }
 
         public void bindData(DataItem data) {
@@ -113,6 +113,20 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
             tvEmail.setText(data.getEmail());
             Picasso.get().load(data.getAvatar()).into(ivProfile);
 
+//            cardView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    int position = getAdapterPosition();
+//                    Intent intent;
+//                    intent = new Intent(context, UserActivity.class);
+//                    intent.putExtra("name_user", usersFiltered.get(position).getFirstName()+
+//                            " "+
+//                            usersFiltered.get(position).getLastName());
+//                    intent.putExtra("email_user", usersFiltered.get(position).getEmail());
+//                    intent.putExtra("avatar", usersFiltered.get(position).getAvatar());
+//                    context.startActivity(intent);
+//                }
+//            });
         }
     }
 }

@@ -108,16 +108,8 @@ public class SecondActivity extends AppCompatActivity {
     private void showLoading(boolean isLoading) {
         if (isLoading) {
             pbLoading.setVisibility(View.VISIBLE);
-//            tvEmail.setVisibility(View.GONE);
-//            tvFullName.setVisibility(View.GONE);
-//            ivProfile.setVisibility(View.GONE);
-//            etSearch.setVisibility(View.GONE);
         } else {
             pbLoading.setVisibility(View.GONE);
-//            tvEmail.setVisibility(View.VISIBLE);
-//            tvFullName.setVisibility(View.VISIBLE);
-//            ivProfile.setVisibility(View.VISIBLE);
-//            etSearch.setVisibility(View.VISIBLE);
         }
     }
 }
