@@ -4,11 +4,7 @@ import com.alfansyah.multidaya.androidbinding.repositories.user.UserService;
 import com.alfansyah.multidaya.androidbinding.utils.ClientUtil;
 
 public class PostRepository {
-    private static final String BASE_URL = "http://jsonplaceholder.typicode.com/";
-
-    public UserService service;
-
-    public PostRepository() {
-        service = ClientUtil.client(UserService.class, BASE_URL);
+    public static PostService client() {
+        return ClientUtil.client(PostService.class,"http://jsonplaceholder.typicode.com/");
     }
 }
